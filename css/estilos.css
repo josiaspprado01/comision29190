@@ -170,7 +170,7 @@ header{
     border-radius: 10px;
 }
 .contenedor-atajos{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 102px;
     margin-left: auto;
@@ -178,6 +178,13 @@ header{
     margin-top: 20px;
     width: 1170px;
     height: 270px;
+}
+.atajo{
+    transition: 0.5s;
+    object-fit: cover;
+}
+.atajo:hover{
+    transform: scale(1.05);
 }
 .atajo img{
     border-radius: 10px;
@@ -210,10 +217,18 @@ header{
     height: 500px;
 }
 .tarjeta-producto{
-    display: inline-block;
-    box-shadow: 0 0 0.5em rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 0.2em rgba(0,0,0,0.2);
     background-color: rgb(255, 255, 255);
     height: 500px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+.tarjeta-producto:hover{
+    transform: scale(1.13);
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
 }
 .tarjeta-producto .tarjeta-footer{
     display: block;
@@ -221,9 +236,7 @@ header{
     margin-right: auto;
     margin-bottom: 20px;
 }
-.producto-imagen img{
-    border-bottom: 1px solid rgba(0,0,0,0.2);;
-}
+
 .producto-información{
     display: block;
     padding: 16px;
@@ -363,17 +376,16 @@ footer{
 }
 .principal-2 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .contenedor-tarjetas {
     width: 870px;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
     display: flex;
     grid-gap: 44px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 6rem 6rem;
 }
 .titulos{
     font-family: 'Francois One', sans-serif;
